@@ -4,7 +4,7 @@ Landing page for [Eunosia](https://eunosia.cl), a clinical AI platform focused o
 
 ## About
 
-Eunosia builds AI tools designed to work inside hospital emergency departments. The platform targets clinical Spanish (es-CL) and is architected for on-premise deployment — no patient data leaves the hospital network.
+Eunosia builds AI tools designed to work inside hospital emergency departments. The platform targets clinical Spanish (es-CL) and is architected for on-premise deployment — no patient data leaves the institution.
 
 Key areas:
 
