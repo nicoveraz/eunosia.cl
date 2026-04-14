@@ -550,8 +550,20 @@
             footer .row {
                 display: flex;
                 justify-content: space-between;
+                align-items: baseline;
                 flex-wrap: wrap;
-                gap: 16px;
+                gap: 8px 16px;
+            }
+            footer .row + .row {
+                margin-top: 8px;
+            }
+            footer .row .muted {
+                color: var(--fg-dim);
+            }
+            footer .row .etym-inline {
+                color: var(--fg-mute);
+                font-size: 11px;
+                letter-spacing: 0.04em;
             }
             .cursor {
                 display: inline-block;
@@ -623,6 +635,16 @@
                 }
                 nav {
                     display: none;
+                }
+                footer .row {
+                    flex-direction: column;
+                    gap: 4px;
+                }
+                footer .row + .row {
+                    margin-top: 12px;
+                }
+                footer .row .etym-inline {
+                    margin-top: 2px;
                 }
             }
         </style>
@@ -1001,14 +1023,14 @@ entrenamiento    <span class="s">infraestructura dedicada</span></pre>
             <div class="wrap">
                 <div class="row">
                     <div>© 2026 Quetru Ltda. · Frutillar, CL</div>
-                    <div style="color: var(--fg-dim)">
-                        en desarrollo activo · pilotos 2026
-                    </div>
                     <div>
                         eunosia<span style="color: var(--accent)">.</span>cl
                     </div>
                 </div>
-                <div class="etym">εὐνοσία · el buen juicio</div>
+                <div class="row">
+                    <div class="muted">en desarrollo activo · pilotos 2026</div>
+                    <div class="etym-inline">εὐνοσία · el buen juicio</div>
+                </div>
             </div>
         </footer>
 
