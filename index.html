@@ -763,11 +763,11 @@
                     <div class="prod">
                         <div class="name">Forecast</div>
                         <div class="desc">
-                            Predicción de volumen y carga de pacientes por
-                            servicio, con incorporación de variables
-                            epidemiológicas estacionales.
+                            Forecasting de volumen y ocupación. Incorpora el
+                            estado del servicio en tiempo real provisto para
+                            producir recomendaciones operacionales auditables.
                         </div>
-                        <div class="status live">live</div>
+                        <div class="status beta">beta</div>
                     </div>
                     <div class="prod">
                         <div class="name">Exámenes</div>
@@ -798,10 +798,10 @@
                     <div class="prod">
                         <div class="name">Dataset</div>
                         <div class="desc">
-                            Dataset sintético de atenciones de urgencia
-                            generado con modelos de lenguaje. Diseñado para
-                            entrenar y evaluar modelos clínicos sin exponer
-                            datos reales de pacientes.
+                            Conjuntos de datos para entrenamiento y evaluación
+                            de modelos clínicos de urgencia: datos sintéticos.
+                            Diseñados para investigación reproducible sin
+                            exponer información de pacientes.
                         </div>
                         <div class="status">research</div>
                     </div>
@@ -839,6 +839,12 @@ entrenamiento    <span class="s">infraestructura dedicada</span></pre>
                         <strong>On-premise por defecto.</strong> Los datos
                         clínicos no salen de la institución. Inferencia local,
                         sin dependencia de proveedores externos.
+                    </li>
+                    <li>
+                        <strong>Infraestructura abierta.</strong> La capa
+                        fundacional es pública y reutilizable por cualquier
+                        institución de salud en Chile. Modelos entrenados e
+                        integraciones clínicas permanecen privados.
                     </li>
                     <li>
                         <strong>Español clínico real.</strong> Adaptado a la
@@ -905,7 +911,8 @@ entrenamiento    <span class="s">infraestructura dedicada</span></pre>
             <section id="research">
                 <h2>research</h2>
                 <p>
-                    Investigación abierta en fundamentos de modelos de lenguaje,
+                    Investigación abierta en fundamentos de modelos de lenguaje
+                    e infraestructura clínica para servicios de urgencia,
                     publicada como código y artículos reproducibles.
                 </p>
 
@@ -936,6 +943,36 @@ entrenamiento    <span class="s">infraestructura dedicada</span></pre>
                         <span class="rc-repo"
                             >github.com/nicoveraz/neurogen</span
                         >
+                    </div>
+                </a>
+
+                <a
+                    class="research-card"
+                    href="https://github.com/nicoveraz/urgencias-core"
+                    target="_blank"
+                    rel="noopener"
+                    style="margin-top: 16px"
+                >
+                    <div class="rc-head">
+                        <div class="rc-title">
+                            urgencias-core <span class="rc-arrow">→</span>
+                        </div>
+                        <div class="rc-tag">github · open source</div>
+                    </div>
+                    <div class="rc-desc">
+                        Código de referencia para análisis, simulación y
+                        forecasting de servicios de urgencia en Chile.
+                        Implementa transformaciones visit-level a series
+                        temporales, características de calendario chileno,
+                        simulación Monte Carlo de ocupación y baselines de
+                        forecasting usando datos públicos DEIS MINSAL.
+                    </div>
+                    <div class="rc-meta">
+                        <span class="rc-repo"
+                            >github.com/nicoveraz/urgencias-core</span
+                        >
+                        <span class="sep">·</span>
+                        <span>MIT License</span>
                     </div>
                 </a>
             </section>
