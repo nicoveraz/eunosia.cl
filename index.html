@@ -3,10 +3,10 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>Eunosia — IA clínica para medicina de urgencia</title>
+        <title>Eunosia — IA clínica para urgencia (en desarrollo)</title>
         <meta
             name="description"
-            content="Plataforma de inteligencia artificial para servicios de urgencia. Copiloto clínico, clasificación de destino, normalización y forecasting."
+            content="Proyecto en desarrollo de investigación e infraestructura en IA clínica para servicios de urgencia. Sin disponibilidad comercial."
         />
         <meta name="theme-color" content="#0b0d0e" />
         <link rel="canonical" href="https://eunosia.cl/" />
@@ -16,22 +16,22 @@
         <meta property="og:locale" content="es_CL" />
         <meta
             property="og:title"
-            content="Eunosia — IA clínica para medicina de urgencia"
+            content="Eunosia — IA clínica para urgencia (en desarrollo)"
         />
         <meta
             property="og:description"
-            content="Inteligencia artificial para servicios de urgencia. Modelos especializados en español clínico, integrados al flujo del médico sin fricción."
+            content="Proyecto en desarrollo de investigación e infraestructura en IA clínica para servicios de urgencia. Sin disponibilidad comercial."
         />
         <meta property="og:url" content="https://eunosia.cl/" />
 
         <meta name="twitter:card" content="summary" />
         <meta
             name="twitter:title"
-            content="Eunosia — IA clínica para medicina de urgencia"
+            content="Eunosia — IA clínica para urgencia (en desarrollo)"
         />
         <meta
             name="twitter:description"
-            content="Inteligencia artificial para servicios de urgencia. Modelos especializados en español clínico."
+            content="Proyecto en desarrollo. Investigación en IA clínica para servicios de urgencia."
         />
 
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -235,16 +235,31 @@
                 border-color: var(--accent);
                 color: var(--accent);
             }
-            .btn.primary {
-                background: var(--accent);
-                color: var(--bg);
-                border-color: var(--accent);
-                font-weight: 500;
+            .notice {
+                border: 1px solid var(--line-2);
+                border-left: 2px solid var(--warn);
+                background: var(--bg-2);
+                padding: 16px 18px;
+                margin: 0 0 32px;
+                max-width: 62ch;
             }
-            .btn.primary:hover {
-                background: var(--accent-dim);
-                border-color: var(--accent-dim);
-                color: var(--bg);
+            .notice .nt {
+                font-family: var(--mono);
+                font-size: 11px;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                color: var(--warn);
+                margin-bottom: 8px;
+            }
+            .notice .nd {
+                color: var(--fg-dim);
+                font-size: 14px;
+            }
+            .section-note {
+                color: var(--fg-mute);
+                font-size: 13px;
+                margin: -4px 0 24px;
+                max-width: 70ch;
             }
             .sig {
                 color: var(--fg-mute);
@@ -375,10 +390,7 @@
                 text-transform: uppercase;
                 letter-spacing: 0.08em;
             }
-            .prod .status.live {
-                color: var(--accent);
-            }
-            .prod .status.beta {
+            .prod .status.wip {
                 color: var(--warn);
             }
 
@@ -655,11 +667,10 @@
                 <div class="logo">eunosia<span class="dot">.</span></div>
                 <div style="display: flex; align-items: center; gap: 16px">
                     <nav>
-                        <a href="#productos">productos</a>
+                        <a href="#componentes">componentes</a>
                         <a href="#arquitectura">arquitectura</a>
                         <a href="#privacidad">privacidad</a>
                         <a href="#research">research</a>
-                        <a href="#contacto">contacto</a>
                     </nav>
                     <button
                         class="theme-toggle"
@@ -675,45 +686,63 @@
 
         <div class="wrap">
             <section class="hero" style="border-top: none">
-                <div class="eyebrow">// IA clínica · medicina de urgencia</div>
+                <div class="eyebrow">
+                    // proyecto en desarrollo · medicina de urgencia
+                </div>
                 <h1>
                     Inteligencia artificial clínica <br />para
                     <span class="hl">medicina de urgencia</span
                     ><span class="cursor"></span>
                 </h1>
                 <p class="lede">
-                    Eunosia es una plataforma de inteligencia artificial para
-                    servicios de urgencia. Modelos especializados en español
-                    clínico, integrados al flujo del médico sin fricción.
+                    Eunosia es un proyecto en desarrollo: modelos e
+                    infraestructura para servicios de urgencia en español
+                    clínico. Este sitio documenta el diseño y el avance técnico
+                    del trabajo.
                 </p>
+                <div class="notice">
+                    <div class="nt">estado del proyecto</div>
+                    <div class="nd">
+                        En desarrollo. No es un producto disponible: no hay
+                        despliegues clínicos, pilotos abiertos, contratación ni
+                        soporte. El sitio se mantiene solo como registro
+                        técnico.
+                    </div>
+                </div>
                 <div class="cta">
-                    <a class="btn primary" href="#contacto">solicitar piloto</a>
                     <a class="btn" href="#arquitectura">ver arquitectura</a>
+                    <a class="btn" href="#research">ver research</a>
                 </div>
                 <p class="sig">// desarrollado por un médico de urgencia</p>
             </section>
 
             <section>
-                <h2>cómo funciona</h2>
+                <h2>cómo está diseñado</h2>
+                <p class="section-note">
+                    Diseño objetivo del sistema. Describe cómo está pensado para
+                    funcionar, no un despliegue en operación.
+                </p>
                 <div class="steps">
                     <div class="step">
                         <div class="step-n">01</div>
                         <div class="step-t">
-                            Se instala dentro de la institución
+                            Instalación dentro de la institución
                         </div>
                         <div class="step-d">
-                            La infraestructura queda en las instalaciones
-                            clínicas. Nada de datos clínicos viaja fuera de la
+                            La infraestructura quedaría en las instalaciones
+                            clínicas. Ningún dato clínico viajaría fuera de la
                             institución.
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-n">02</div>
-                        <div class="step-t">Se integra al EMR existente</div>
+                        <div class="step-t">
+                            Integración con el EMR existente
+                        </div>
                         <div class="step-d">
-                            Eunosia se acopla al sistema clínico que el servicio
-                            ya usa. No exige migración, cambio de proveedor ni
-                            flujos paralelos.
+                            El sistema se acopla al software clínico que el
+                            servicio ya usa, sin migración, cambio de proveedor
+                            ni flujos paralelos.
                         </div>
                     </div>
                     <div class="step">
@@ -724,7 +753,7 @@
                         <div class="step-d">
                             Las sugerencias aparecen en contexto, dentro de la
                             ficha. El control clínico y la responsabilidad
-                            siguen siendo del médico tratante.
+                            seguirían siendo del médico tratante.
                         </div>
                     </div>
                 </div>
@@ -751,15 +780,20 @@
                     </div>
                 </div>
                 <p style="margin-top: 20px">
-                    Modelos especializados en el lenguaje, estructura y flujo de
-                    trabajo de los servicios de urgencia. Arquitectura pensada
-                    para operar dentro de la institución, integrada al sistema
-                    clínico existente.
+                    Líneas de trabajo del proyecto: modelos especializados en el
+                    lenguaje, estructura y flujo de trabajo de los servicios de
+                    urgencia, sobre una arquitectura pensada para operar dentro
+                    de la institución. Objetivos de diseño, en distintos grados
+                    de avance.
                 </p>
             </section>
 
-            <section id="productos">
-                <h2>productos</h2>
+            <section id="componentes">
+                <h2>componentes</h2>
+                <p class="section-note">
+                    Módulos del proyecto y su estado de desarrollo interno.
+                    Ninguno está disponible para uso clínico ni distribución.
+                </p>
                 <div class="products">
                     <div class="prod">
                         <div class="name">Copilot</div>
@@ -769,7 +803,7 @@
                             sugerencias contextuales basadas en protocolos
                             clínicos.
                         </div>
-                        <div class="status live">live</div>
+                        <div class="status wip">prototipo</div>
                     </div>
                     <div class="prod">
                         <div class="name">Triage</div>
@@ -778,7 +812,7 @@
                             observación, hospitalización, UCI o traslado.
                             Arquitectura híbrida para decisiones estructuradas.
                         </div>
-                        <div class="status beta">beta</div>
+                        <div class="status wip">en desarrollo</div>
                     </div>
                     <div class="prod">
                         <div class="name">CIE-10</div>
@@ -787,7 +821,7 @@
                             libre de la atención, adaptada al contexto de
                             urgencia.
                         </div>
-                        <div class="status beta">beta</div>
+                        <div class="status wip">en desarrollo</div>
                     </div>
                     <div class="prod">
                         <div class="name">Forecast</div>
@@ -796,7 +830,7 @@
                             estado del servicio en tiempo real provisto para
                             producir recomendaciones operacionales auditables.
                         </div>
-                        <div class="status beta">beta</div>
+                        <div class="status wip">en desarrollo</div>
                     </div>
                     <div class="prod">
                         <div class="name">Exámenes</div>
@@ -805,7 +839,7 @@
                             basado en recuperación sobre guías y protocolos
                             clínicos.
                         </div>
-                        <div class="status beta">beta</div>
+                        <div class="status wip">en desarrollo</div>
                     </div>
                     <div class="prod">
                         <div class="name">NLP</div>
@@ -813,7 +847,7 @@
                             Servicios de normalización, extracción de entidades
                             clínicas y segmentación de texto libre clínico.
                         </div>
-                        <div class="status beta">beta</div>
+                        <div class="status wip">en desarrollo</div>
                     </div>
                     <div class="prod">
                         <div class="name">Pipeline</div>
@@ -842,7 +876,9 @@
                 <p>
                     Arquitectura híbrida: modelos clásicos para decisiones
                     estructuradas, modelos de lenguaje para generación de texto
-                    clínico. Diseñada para desplegarse dentro de la institución.
+                    clínico. Pensada para desplegarse dentro de la institución.
+                    Es el diseño de referencia del proyecto, no una instalación
+                    en producción.
                 </p>
                 <pre class="arch">
 <span class="c"># flujo de inferencia</span>
@@ -896,8 +932,10 @@ entrenamiento    <span class="s">infraestructura dedicada</span></pre>
             <section id="privacidad">
                 <h2>privacidad</h2>
                 <p>
-                    Eunosia está diseñada para que los datos clínicos nunca
-                    salgan de la institución.
+                    Criterios de diseño del proyecto: los datos clínicos nunca
+                    saldrían de la institución. No hay despliegues
+                    institucionales en curso ni datos de pacientes en manos del
+                    proyecto.
                 </p>
                 <div class="privacy-grid">
                     <div class="pp">
@@ -942,7 +980,8 @@ entrenamiento    <span class="s">infraestructura dedicada</span></pre>
                 <p>
                     Investigación abierta en fundamentos de modelos de lenguaje
                     e infraestructura clínica para servicios de urgencia,
-                    publicada como código y artículos reproducibles.
+                    publicada como código y artículos reproducibles. Es la parte
+                    del trabajo que sí está disponible públicamente.
                 </p>
 
                 <a
@@ -1005,18 +1044,6 @@ entrenamiento    <span class="s">infraestructura dedicada</span></pre>
                 </a>
             </section>
 
-            <section id="contacto">
-                <h2>contacto</h2>
-                <p>
-                    Eunosia es desarrollado por
-                    <a href="https://quetru.cl">Quetru Ltda.</a> en Frutillar,
-                    Chile. Para pilotos clínicos, colaboraciones académicas o
-                    consultas institucionales:
-                </p>
-                <p style="margin-top: 16px">
-                    <a href="mailto:contacto@eunosia.cl">contacto@eunosia.cl</a>
-                </p>
-            </section>
         </div>
 
         <footer>
@@ -1028,7 +1055,9 @@ entrenamiento    <span class="s">infraestructura dedicada</span></pre>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="muted">en desarrollo activo · pilotos 2026</div>
+                    <div class="muted">
+                        proyecto en desarrollo · sin disponibilidad comercial
+                    </div>
                     <div class="etym-inline">εὐνοσία · el buen juicio</div>
                 </div>
             </div>
